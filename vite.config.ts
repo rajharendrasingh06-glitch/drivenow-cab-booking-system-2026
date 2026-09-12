@@ -8,6 +8,7 @@ import { defineConfig, Plugin } from 'vite';
 function aistudioMediaPlugin(): Plugin {
   return {
     name: 'vite-plugin-aistudio-media',
+
     configureServer(server) {
       server.middlewares.use((req, res, next) => {
         if (req.url && req.url.startsWith('/assets/aistudio/')) {
@@ -79,7 +80,8 @@ function aistudioMediaPlugin(): Plugin {
 
 export default defineConfig(() => {
   return {
-    base: '/drivenow-cab-booking-system-2026/',
+    // IMPORTANT: Render deployment runs from the root domain
+    base: '/',
 
     plugins: [
       react(),
