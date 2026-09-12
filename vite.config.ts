@@ -81,7 +81,7 @@ function aistudioMediaPlugin(): Plugin {
 export default defineConfig(() => {
   return {
     // IMPORTANT: Render deployment runs from the root domain
-    base: '/',
+    base: '/drivenow-cab-booking-system-2026/',
 
     plugins: [
       react(),
